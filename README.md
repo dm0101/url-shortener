@@ -12,7 +12,7 @@ Steps to run:<br />
 3.Create virtualenv using command "virtualenv project_name"<br />
 4.Git clone the project<br />
 5.Go to url_shortener folder<br />
-6.Run command "pip install -r requirements.txt"<br />
+6.Run command in url_shortner project "pip install -r requirements.txt"<br />
 7.Start django server using command "python manage.py runserver"<br />
 <br />
 How to test the URL:<br />
@@ -26,8 +26,8 @@ Data body to be sent - {<br />
 }<br />
 <br />
 2.Shortened URl five count fo total hits and hits in last one hour.<br />
-API END- <returned short url from step one><br />
-Method - GET<br />
+API END- returned short url from step one
+Method - GET
 <br /><br />
 3.Search URL based on partial or exact match in long URL title.<br />
 API END- http://127.0.0.1:8000/search/<br />
