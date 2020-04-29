@@ -45,8 +45,8 @@ class ShortURLView(APIView):
 		qs = URL.objects.get(url_hash=url_hash)
 		click = Click.objects.create(url_hash = qs)
 		click_count = Click.objects.filter(url_hash=qs).count()
-		time_threshold = datetime.now() - timedelta(hours=5)
-		clicks_last_hour = Click.objects.filter(timestamp__lte = time_threshold).count()
+		time_threshold = datetime.now() - timedelta(hours=1)
+		clicks_last_hour = Click.objects.filter(url_hash=qs,timestamp__gte = time_threshold).count()
 		return Response({'total clicks':click_count,'clicks in last one hour':clicks_last_hour})
 
 class SearchView(APIView):
