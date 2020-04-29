@@ -41,3 +41,31 @@ API END- http://127.0.0.1:8000/short/<br />
 Method - GET<br />
 <br />
 Alternatively,the API can be tested using Browser also.<br />
+
+
+Python Anywhere-
+I have hosted the API on Python Anywhere for usage without installation.
+1.Take a long url and give short URL<br />
+API END- http://dhruvm.pythonanywhere.com/short/<br />
+Method - POST<br />
+Data body to be sent - {<br />
+	"full_url":"http://www.example.com"<br />
+}<br />
+<br />
+2.Shortened URl five count fo total hits and hits in last one hour.<br />
+API END- returned short url from step one
+Method - GET
+<br /><br />
+3.Search URL based on partial or exact match in long URL title.<br />
+API END- http://dhruvm.pythonanywhere.com/search/<br />
+Method - POST<br />
+Data body to be sent - {<br />
+	"search_term":"search word from the long url"<br />
+}<br />
+<br />
+4.Get list of all short URL<br />
+API END- http://dhruvm.pythonanywhere.com/short/<br />
+Method - GET<br />
+<br />
+
+
